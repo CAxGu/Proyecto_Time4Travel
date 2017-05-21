@@ -7,7 +7,7 @@
 		<div>
             <label>Usuario:</label>
            	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $_POST?$_POST['usrnom']:""; ?>" >
-			<span  id="e_usrnom" class="styerror"></span>
+			<span  id="e_usrnom" class="styerror" ></span>
         </div>
 		<div class="boxes">
 			<label>Contraseña:</label>

@@ -9,12 +9,12 @@
 		//debug($result);
 		if ($result['resultado']) {
 			$arrArgument = array(
-							'usrnom' => strtoupper($result['datos']['usrnom']),
-                            'psswd' => strtoupper($result['datos']['psswd']),
-                            'email' => strtoupper($result['datos']['email']),
+							'usrnom' => $result['datos']['usrnom'],
+                            'psswd' => $result['datos']['psswd'],
+                            'email' => $result['datos']['email'],
 							'nom' => $result['datos']['nom'],
 							'ape' => $result['datos']['ape'],
-                            'sexo' => strtoupper($result['datos']['sexo']),
+                            'sexo' => $result['datos']['sexo'],
                             'f_nac' => $result['datos']['f_nac'],
                             'direc' => $result['datos']['direc'],
 							'pais' => $result['datos']['pais']
