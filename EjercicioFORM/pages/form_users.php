@@ -1,88 +1,38 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Alta de Usuario</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="validate_users.js"></script>
-	<script>
-		$( function() {
-			$( "#f_nac" ).datepicker({
-			yearRange: '-80Y:',
-			maxDate: '0Y-18Y',
-			dateFormat: 'yy-mm-dd',
-			changeMonth: true,
-			changeYear: true
-			});
-		} );
-	</script>
-	<script>
-		$( function() {
-			$( "#pais" ).selectmenu({width:253, maxHeight:300})
-			.selectmenu( "menuWidget" )
-			.addClass( "overflow" );
-		} );
-	</script>
-</head>
-<body>
-	<form method="post" name="formusers" id="formusers" onsubmit="return validate_user();" action="index.php">
+<form method="post" name="formusers" id="formusers">
+		<?php
+				if(isset($error)){
+				print ("<br><span class='error' color: #ff0000;>" . "* ".$error . "</span></br>");
+		}?>	
+		<br><br>	
 		<div>
             <label>Usuario:</label>
-           	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php @$_POST['usrnom'] ?>" >
+           	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $_POST?$_POST['usrnom']:""; ?>" >
 			<span  id="e_usrnom" class="styerror"></span>
-			<?php
-				if ($error_usrnom != "")
-				echo ("<span class='styerror'>" . "* ".$error_usrnom . "</span>");
-			?>
         </div>
 		<div class="boxes">
 			<label>Contraseña:</label>
-			<input maxlength="12" size="30" type='password' name="psswd" id="psswd" placeholder="Introduzca su contraseña" value="<?php @$_POST['psswd'] ?>" >
+			<input maxlength="12" size="30" type='password' name="psswd" id="psswd" placeholder="Introduzca su contraseña" value="<?php echo $_POST?$_POST['psswd']:""; ?>" >
 			<span id="e_psswd" class="styerror"></span>
-			<?php
-				if ($error_psswd != "")
-				echo ("<span class='styerror'>" . "* ".$error_psswd . "</span>");
-			?>
 		</div>
 		<div class="boxes">
 			<label>Confirma tu Contraseña:</label>
-			<input maxlength="12" size="30" type='password' name="psswd2" id="psswd2" placeholder="Confirme su contraseña" value="<?php @$_POST['psswd2'] ?>" >
+			<input maxlength="12" size="30" type='password' name="psswd2" id="psswd2" placeholder="Confirme su contraseña" value="<?php echo $_POST?$_POST['psswd2']:""; ?>" >
 			<span id="e_psswd2" class="styerror"></span>
-			<?php
-				if ($error_psswd2 != "")
-				echo ("<span class='styerror'>" . "* ".$error_psswd2 . "</span>");
-			?>
 		</div>
         <div class="boxes">
 			<label>Email:</label>
-			<input size="30" type='text' name="email" id="email" placeholder="Introduzca su email" value="<?php @$_POST['email'] ?>">
+			<input size="30" type='text' name="email" id="email" placeholder="Introduzca su email" value="<?php echo $_POST?$_POST['email']:""; ?>">
 			<span id="e_email" class="styerror"></span>
-			<?php
-				if ($error_email != "")
-				echo ("<span class='styerror'>" . "* ".$error_email . "</span>");
-			?>
 		</div>
 		<div class="boxes">
 			<label>Nombre:</label>
-			<input size="30" type='text' name="nom" id="nom" placeholder="Introduzca su nombre"  value="<?php @$_POST['nom'] ?>" >
-			<span id="e_nom" class="styerror"></span>
-			<?php
-				if ($error_nom != "")
-				echo ("<span class='styerror'>" . "* ".$error_nom . "</span>");
-			?>		
+			<input size="30" type='text' name="nom" id="nom" placeholder="Introduzca su nombre"  value="<?php echo $_POST?$_POST['nom']:""; ?>" >
+			<span id="e_nom" class="styerror"></span>	
 		</div>
 		<div class="boxes">
 			<label>Apellidos:</label>
-			<input size="30" type='text' name="ape" id="ape" placeholder="Introduzca sus apellidos"  value="<?php @$_POST['ape'] ?>" >
-			<span id="e_ape" class="styerror"></span>
-			<?php
-				if ($error_ape != "")
-				echo ("<span class='styerror'>" . "* ".$error_ape . "</span>");
-			?>		
+			<input size="30" type='text' name="ape" id="ape" placeholder="Introduzca sus apellidos"  value="<?php echo $_POST?$_POST['ape']:""; ?>" >
+			<span id="e_ape" class="styerror"></span>		
 		</div>
 		<div class="boxes">
 			<label>Sexo:</label>
@@ -92,25 +42,17 @@
 		</div>
 		<div class="boxes">
 			<label>Fecha de Nacimiento:</label>
-			<input size="30" type="text" name= "f_nac" id="f_nac" placeholder="Ingrese su fecha de nacimiento" value="<?php @$_POST['f_nac'] ?>" readonly>
+			<input size="30" type="text" name= "f_nac" id="f_nac" placeholder="Ingrese su fecha de nacimiento" readonly>
 			<span id="e_f_nac" class="styerror"></span>
-			<?php
-				if ($error_f_nac != "")
-				echo ("<span class='styerror'>" . "* ".$error_f_nac . "</span>");
-			?>
 		</div>
 		<div class="boxes">
 			<label>Dirección:</label>
-			<input size="30" type='text' name="direc" id="direc" placeholder="Introduzca su dirección" value="<?php @$_POST['direc'] ?>" >
+			<input size="30" type='text' name="direc" id="direc" placeholder="Introduzca su dirección" value="<?php echo $_POST?$_POST['direc']:""; ?>" >
 			<span id="e_direc" class="styerror"></span>
-			<?php
-				if ($error_direc != "")
-				echo ("<span class='styerror'>" . "* ".$error_direc . "</span>");
-			?>
 		</div>
 		<div class="boxes">
 			<label>País:</label>
-			<select name="pais" id="pais" value="<?php @$_POST['pais'] ?>" >
+			<select name="pais" id="pais" >
 													<option value="" selected>-- Seleccione su País --</option>
 													<option value="Afganistán">Afganistán</option>
 													<option value="Albania">Albania</option>
@@ -348,13 +290,7 @@
 													<option value="Zimbabue">Zimbabue</option>
 										 			</select>
 			<span id="e_pais" class="styerror"></span>
-			<?php
-				if ($error_pais != "")
-				echo ("<span class='styerror'>" . "* ".$error_pais . "</span>");
-			?>
 		</div>
 											 
-		<br><br><div><input name="alta" type="submit" value="Registro"/></div></br></br>
+		<br><br><div><input name="alta" type="button" value="Registro" onclick="validate_user()"/></div></br></br>
 	</form>
-</body>
-</html>
