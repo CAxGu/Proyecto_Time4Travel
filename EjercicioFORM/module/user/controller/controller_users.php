@@ -1,6 +1,6 @@
 <?php
 	include("utils/functions.inc.php"); 
-	include("classes/Browser.class.php");
+	include("module/user/model/DAOUser.php");
 
 	//if (isset($_POST['Submit'])) {
 	

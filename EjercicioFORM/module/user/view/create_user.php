@@ -1,4 +1,5 @@
-<form method="post" name="formusers" id="formusers">
+<div id="contenido">
+<form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" action="index.php?page=controller_user&op=create">
 		<?php
 				if(isset($error)){
 				print ("<br><span class='error' color: #ff0000;>" . "* ".$error . "</span></br>");
@@ -6,8 +7,8 @@
 		<br><br>	
 		<div>
             <label>Usuario:</label>
-           	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $_POST?$_POST['usrnom']:""; ?>" >
-			<span  id="e_usrnom" class="styerror" ></span>
+           	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $_POST?$_POST['usrnom']:""; ?>" >	
+			<span  id="e_usrnom" class="styerror"></span>
         </div>
 		<div class="boxes">
 			<label>Contraseña:</label>
@@ -292,5 +293,7 @@
 			<span id="e_pais" class="styerror"></span>
 		</div>
 											 
-		<br><br><div><input name="alta" type="button" value="Registro" onclick="validate_user()"/></div></br></br>
+		<br><br><div><input type="submit" name="create" id="create"/></div></br></br>
+        <br><br><div></div></br></br>
 	</form>
+    </div>

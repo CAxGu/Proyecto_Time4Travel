@@ -1,7 +1,7 @@
 <?php
 
 	include("utils/functions.inc.php");
-	include("utils/DAOUser.php");
+	include("user/model/DAOUser.php");
 
 	$user = $_SESSION['user'];
 	debug($user);

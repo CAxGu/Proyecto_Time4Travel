@@ -3,7 +3,7 @@ body {
 	font-size:11px;
 	font-weight: bold;
 	color:#333333;
-	background-image:url(img/fondo.jpg);
+	background-image:url(../img/fondo.jpg);
 	background-size: cover;
 	margin:0px;
 }
@@ -14,13 +14,13 @@ body {
 }
 #header {
 	height:80px;
-	background-image:url(img/headviajes.jpg);
+	background-image:url(../img/headviajes.jpg);
 	background-repeat:no-repeat;
 	background-size: 800px;
 	height:120px;
 }
 #menu {
-	background-image:url(img/pergaminomenu.png);
+	background-image:url(../img/pergaminomenu.png);
 	height:25px;
 	padding-top:5px;
 	text-align:center;
@@ -40,7 +40,7 @@ body {
 	height:130px;
 	color:#FFFFFF;
 	text-align:center;
-	background-image:url(img/footerviajes.jpg);
+	background-image:url(../img/footerviajes.jpg);
 	background-size: 280px;
 	height:120px;
 
@@ -103,3 +103,70 @@ h1 {
     height: 200px;
     
 	}
+
+.Button_green {
+	background-color:green;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid green;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_green:hover {
+	background-color:greenyellow;
+}
+.Button_green:active {
+	position:relative;
+	top:1px;
+}
+.Button_blue {
+	background-color:blue;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid blue;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_blue:hover {
+	background-color:cyan;
+}
+.Button_blue:active {
+	position:relative;
+	top:1px;
+}
+.Button_red {
+	background-color:crimson;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid crimson;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_red:hover {
+	background-color:red;
+}
+.Button_red:active {
+	position:relative;
+	top:1px;
+}
