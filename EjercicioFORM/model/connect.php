@@ -1,5 +1,5 @@
 <?php
-    class Conectar{
+    class connect{
 		public static function con(){
 			$host = getenv('127.0.0.1');  
     		$user = "root";                     //Your Cloud 9 username

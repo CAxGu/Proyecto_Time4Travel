@@ -1,5 +1,5 @@
 <div id="contenido">
-<form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" action="index.php?page=controller_user&op=create">
+<form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate_user();" action="index.php?page=controller_user&op=create">
 		<?php
 				if(isset($error)){
 				print ("<br><span class='error' color: #ff0000;>" . "* ".$error . "</span></br>");
@@ -294,6 +294,6 @@
 		</div>
 											 
 		<br><br><div><input type="submit" name="create" id="create"/></div></br></br>
-        <br><br><div></div></br></br>
+        <br><br><div><a href="index.php?page=controller_user&op=list">Volver</a></div></br></br>
 	</form>
     </div>

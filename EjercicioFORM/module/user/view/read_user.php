@@ -6,7 +6,7 @@
             <td>Usuario: </td>
             <td>
                 <?php
-                    echo $user['usrnom'];
+                    echo $user['usuario'];
                 ?>
             </td>
         </tr>
@@ -15,7 +15,7 @@
             <td>Contraseña: </td>
             <td>
                 <?php
-                    echo $user['pass'];
+                    echo $user['password'];
                 ?>
             </td>
         </tr>
@@ -33,7 +33,7 @@
             <td>Nombre: </td>
             <td>
                 <?php
-                    echo $user['nom'];
+                    echo $user['nombre'];
                 ?>
             </td>
         </tr>
@@ -42,7 +42,7 @@
             <td>Apellidos: </td>
             <td>
                 <?php
-                    echo $user['ape'];
+                    echo $user['apellidos'];
                 ?>
             </td>
         </tr>
@@ -69,7 +69,7 @@
             <td>Direccion: </td>
             <td>
                 <?php
-                    echo $user['direc'];
+                    echo $user['direccion'];
                 ?>
             </td>
             

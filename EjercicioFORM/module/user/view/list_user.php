@@ -6,7 +6,7 @@
     	<div class="row">
     		<p><a href="index.php?page=controller_user&op=create"><img src="view/img/anadir.png"></a></p>
     		
-    		<table>
+    		<table border="1">
                 <tr>
                     <td width=125><b>Usuario</b></th>
                     <td width=125><b>Nombre</b></th>
@@ -21,15 +21,15 @@
                     }else{
                         foreach ($rdo as $row) {
                        		echo '<tr>';
-                    	   	echo '<td width=125>'. $row['usrnom'] . '</td>';
-                    	   	echo '<td width=125>'. $row['name'] . '</td>';
-                    	   	echo '<td width=125>'. $row['ape'] . '</td>';
+                    	   	echo '<td width=125>'. $row['usuario'] . '</td>';
+                    	   	echo '<td width=125>'. $row['nombre'] . '</td>';
+                    	   	echo '<td width=125>'. $row['apellidos'] . '</td>';
                     	   	echo '<td width=350>';
-                    	   	echo '<a class="Button_blue" href="index.php?page=controller_user&op=read&id='.$row['usrnom'].'">Read</a>';
+                    	   	echo '<a class="Button_blue" href="index.php?page=controller_user&op=read&id='.$row['usuario'].'">Read</a>';
                     	   	echo '&nbsp;';
-                    	   	echo '<a class="Button_green" href="index.php?page=controller_user&op=update&id='.$row['usrnom'].'">Update</a>';
+                    	   	echo '<a class="Button_green" href="index.php?page=controller_user&op=update&id='.$row['usuario'].'">Update</a>';
                     	   	echo '&nbsp;';
-                    	   	echo '<a class="Button_red" href="index.php?page=controller_user&op=delete&id='.$row['usrnom'].'">Delete</a>';
+                    	   	echo '<a class="Button_red" href="index.php?page=controller_user&op=delete&id='.$row['usuario'].'">Delete</a>';
                     	   	echo '</td>';
                     	   	echo '</tr>';
                         }
