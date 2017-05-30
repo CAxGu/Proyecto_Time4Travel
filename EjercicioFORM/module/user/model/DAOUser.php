@@ -7,7 +7,7 @@
         	$psswd=$datos['psswd'];
             $email=$datos['email'];
         	$nom=$datos['nom'];
-            $epe=$datos['ape'];
+            $ape=$datos['ape'];
         	$sexo=$datos['sexo'];
         	$f_nac=$datos['f_nac'];
             $direc=$datos['direc'];
@@ -46,7 +46,7 @@
         	$psswd=$datos['psswd'];
             $email=$datos['email'];
         	$nom=$datos['nom'];
-            $epe=$datos['ape'];
+            $ape=$datos['ape'];
         	$sexo=$datos['sexo'];
         	$f_nac=$datos['f_nac'];
             $direc=$datos['direc'];

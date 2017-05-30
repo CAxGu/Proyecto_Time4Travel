@@ -1,14 +1,15 @@
 <div id="contenido">
 <form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate_user();" action="index.php?page=controller_user&op=create">
 		<?php
-				if(isset($error)){
-				print ("<br><span class='error' color: #ff0000;>" . "* ".$error . "</span></br>");
+				if(isset($check['error'])){
+				print ("<br><span class='error' color: #ff0000;>" . "* ".$check['error'] . "</span></br>");
 		}?>	
 		<br><br>	
 		<div>
             <label>Usuario:</label>
            	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $_POST?$_POST['usrnom']:""; ?>" >	
-			<span  id="e_usrnom" class="styerror"></span>
+			<span  id="e_usrnom" class="styerror">
+			</span>
         </div>
 		<div class="boxes">
 			<label>Contraseña:</label>
@@ -43,7 +44,7 @@
 		</div>
 		<div class="boxes">
 			<label>Fecha de Nacimiento:</label>
-			<input size="30" type="text" name= "f_nac" id="f_nac" placeholder="Ingrese su fecha de nacimiento" readonly>
+			<input size="30" type="text" name= "f_nac" id="f_nac" placeholder="Ingrese su fecha de nacimiento" readonly value="<?php echo $_POST?$_POST['f_nac']:""; ?>" >
 			<span id="e_f_nac" class="styerror"></span>
 		</div>
 		<div class="boxes">
@@ -54,6 +55,14 @@
 		<div class="boxes">
 			<label>País:</label>
 			<select name="pais" id="pais" >
+				<option value="" selected>-- Seleccione su País --</option>
+				<option value="España">España</option>
+				<option value="Francia">Francia</option>
+				<option value="Portugal">Portugal</option>
+				<option value="Andorra">Andorra</option>
+			<span id="e_pais" class="styerror"></span>
+		</div>
+			<!--<select name="pais" id="pais" >
 													<option value="" selected>-- Seleccione su País --</option>
 													<option value="Afganistán">Afganistán</option>
 													<option value="Albania">Albania</option>
@@ -291,9 +300,9 @@
 													<option value="Zimbabue">Zimbabue</option>
 										 			</select>
 			<span id="e_pais" class="styerror"></span>
-		</div>
+		</div>-->
 											 
 		<br><br><div><input type="submit" name="create" id="create"/></div></br></br>
-        <br><br><div><a href="index.php?page=controller_user&op=list">Volver</a></div></br></br>
+        <br><br><div align="left"><a href="index.php?page=controller_user&op=list">Volver</a></div></br></br>
 	</form>
     </div>

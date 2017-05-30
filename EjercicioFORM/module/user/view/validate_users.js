@@ -1,4 +1,5 @@
 function validate_user() {
+
 	if (document.formusers.usrnom.value.length==0){
 	    document.getElementById('e_usrnom').innerHTML = "Tiene que escribir su usuario";
 	    document.formusers.usrnom.focus();
@@ -68,7 +69,7 @@ function validate_user() {
 	    return 0;
     }
     document.getElementById('e_pais').innerHTML = "";
-   
+
 	document.formusers.submit();
-	document.formusers.action="index.php?page=controller_users";
+	document.formusers.action="index.php?page=controller_user";
 }

@@ -31,13 +31,17 @@
             $check = true;
             
             if (isset($_POST['create'])){
-                $check=$resultado['resultado'];
+                $check=validate_user();
 
-                if ($check){
+                if ($check['resultado']){
                     $_SESSION['usrnom']=$_POST;
+
                     try{
                         $daouser = new DAOUser();
     		            $rdo = $daouser->insert_user($_POST);
+
+                      //  echo("Hola no he hecho el insert: $_POST");
+                        //die();
 
                     }catch (Exception $e){
                         $callback = 'index.php?page=503';

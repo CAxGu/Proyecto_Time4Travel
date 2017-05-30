@@ -3,14 +3,14 @@ body {
 	font-size:11px;
 	font-weight: bold;
 	color:#333333;
-	background-image:url(../img/fondo.jpg);
+	background-image:url(../img/backg.jpg);
 	background-size: cover;
 	margin:0px;
 }
 #wrapper {
 	width:800px;
 	margin:auto;
-	background-color:#FFFFFF;	
+	background-color:#FFFFFF;		
 }
 #header {
 	height:80px;
@@ -127,7 +127,6 @@ h1 {
 	top:1px;
 }
 .Button_blue {
-	margin: 10px;
 	background-color:blue;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;

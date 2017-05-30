@@ -66,6 +66,18 @@
 		<div class="boxes">
 			<label>País:</label>
 			<select name="pais" id="pais" >
+					<option value="España"<?php if($user['pais']==="España") echo 'selected'?>>España</option>
+					<option value="Francia"<?php if($user['pais']==="Francia") echo 'selected'?>>Francia</option>
+					<option value="Portugal"<?php if($user['pais']==="Portugal") echo 'selected'?>>Portugal</option>
+					<option value="Andorra"<?php if($user['pais']==="Andorra") echo 'selected'?>>Andorra</option>-->
+			<!--	<option value="" selected>-- Seleccione su País --</option>
+				<option value="España">España</option>
+				<option value="Francia">Francia</option>
+				<option value="Portugal">Portugal</option>
+				<option value="Andorra">Andorra</option>-->
+			<span id="e_pais" class="styerror"></span>
+		</div>
+			<!--<select name="pais" id="pais" >
 													<option value="" selected>-- Seleccione su País --</option>
 													<option value="Afganistán">Afganistán</option>
 													<option value="Albania">Albania</option>
@@ -303,7 +315,7 @@
 													<option value="Zimbabue">Zimbabue</option>
 										 			</select>
 			<span id="e_pais" class="styerror"></span>
-		</div>
-											 
-		<br><br><div><input name="alta" type="button" value="Registro" onclick="validate_user()"/></div></br></br>
+		</div>-->
+		<br><br><div><input type="submit" name="update" id="update" value="Registro"/></div></br></br>
+        <br><br><div><a href="index.php?page=controller_user&op=list">Volver</a></div></br></br>									 
 	</form>
