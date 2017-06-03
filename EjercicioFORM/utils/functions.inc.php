@@ -20,12 +20,12 @@
 
 			'nom' => array(
 				'filter'=>FILTER_VALIDATE_REGEXP,
-				'options'=>array('regexp'=>'/^\D{3,30}$/')
+				'options'=>array('regexp'=>'/^\D{3,30}\s*$/')
 			),
 			
 			'ape' => array(
 				'filter'=>FILTER_VALIDATE_REGEXP,
-				'options'=>array('regexp'=>'/^[a-zA-Z0-18]*$/')
+				'options'=>array('regexp'=>'/^[a-zA-Z0-18\s]*$/')
 			),
 
 

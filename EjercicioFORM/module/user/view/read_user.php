@@ -1,7 +1,7 @@
 <div id="contenido">
     <h1>Informacion del Usuario</h1>
     <p>
-    <table border='2'>
+    <table>
         <tr>
             <td>Usuario: </td>
             <td>

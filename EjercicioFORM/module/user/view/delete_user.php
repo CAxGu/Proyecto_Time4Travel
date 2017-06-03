@@ -6,8 +6,8 @@
                 
             </tr>
             <tr>
-                <td align="center"><button type="submit" class="Button_green"name="delete" id="delete">Aceptar</button></td>
-                <td align="center"><a class="Button_red" href="index.php?page=controller_user&op=list">Cancelar</a></td>
+                <td align="center"><button type="submit" name="delete" id="delete"><img src="view/img/ok.png" height=45px weight=45px></button></td>
+                <td align="center"><a class="button" href="index.php?page=controller_user&op=list"><img src="view/img/cancel.png" height=55px weight=55px></a></td>
             </tr>
         </table>
     </form>

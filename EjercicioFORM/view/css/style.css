@@ -14,7 +14,7 @@ body {
 }
 #header {
 	height:80px;
-	background-image:url(../img/headviajes.jpg);
+	background-image:url(../img/banner.png);
 	background-repeat:no-repeat;
 	background-size: 800px;
 	height:120px;
@@ -40,9 +40,9 @@ body {
 	height:130px;
 	color:#FFFFFF;
 	text-align:center;
-	background-image:url(../img/footerviajes.jpg);
-	background-size: 280px;
-	height:120px;
+	background-image:url(../img/footer.png);
+	background-size: 800px;
+	height:105px;
 
 }
 h1 {
@@ -104,69 +104,21 @@ h1 {
     
 	}
 
-.Button_green {
-	background-color:green;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:10px;
-	border:1px solid green;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
-.Button_green:hover {
-	background-color:greenyellow;
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
-.Button_green:active {
-	position:relative;
-	top:1px;
-}
-.Button_blue {
-	background-color:blue;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:10px;
-	border:1px solid blue;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-.Button_blue:hover {
-	background-color:cyan;
-}
-.Button_blue:active {
-	position:relative;
-	top:1px;
-}
-.Button_red {
-	background-color:crimson;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:10px;
-	border:1px solid crimson;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-.Button_red:hover {
-	background-color:red;
-}
-.Button_red:active {
-	position:relative;
-	top:1px;
+
+a.button{
+	-webkit-appearance: button;
+    -moz-appearance: button;
+	appearance: button;
+
+    text-decoration: none;
+    color: initial;
 }

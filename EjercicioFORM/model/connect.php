@@ -7,7 +7,7 @@
     		$pass = "19445115117cacg";                             //Remember, there is NO password!
     		$db = "registro";                      //Your database name you want to connect to
     		$port = 3306;                           //The port #. It is always 3306
-    		$tabla="usuarios";
+    		//$tabla="usuarios";
     		
     		$conexion = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
 			return $conexion;

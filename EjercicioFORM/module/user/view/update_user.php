@@ -1,4 +1,4 @@
-<form autocomplete="on" method="post" name="update_user" id="update_user" onsubmit="return validate();" action="index.php?page=controller_user&op=update">
+<form autocomplete="on" method="post" name="update_user" id="update_user" onsubmit="return validate_user();" action="index.php?page=controller_user&op=update">
 		<?php
 				if(isset($error)){
 				print ("<br><span class='error' color: #ff0000;>" . "* ".$error . "</span></br>");
@@ -6,8 +6,7 @@
 		<br><br>	
 		<div>
             <label>Usuario:</label>
-           	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $user['usuario'];?>" readonly>	
-			<span  id="e_usrnom" class="styerror"></span>
+           	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $user['usuario'];?>" readonly>
         </div>
 		<div class="boxes">
 			<label>Contraseña:</label>
@@ -70,11 +69,7 @@
 					<option value="Francia"<?php if($user['pais']==="Francia") echo 'selected'?>>Francia</option>
 					<option value="Portugal"<?php if($user['pais']==="Portugal") echo 'selected'?>>Portugal</option>
 					<option value="Andorra"<?php if($user['pais']==="Andorra") echo 'selected'?>>Andorra</option>-->
-			<!--	<option value="" selected>-- Seleccione su País --</option>
-				<option value="España">España</option>
-				<option value="Francia">Francia</option>
-				<option value="Portugal">Portugal</option>
-				<option value="Andorra">Andorra</option>-->
+			</select>
 			<span id="e_pais" class="styerror"></span>
 		</div>
 			<!--<select name="pais" id="pais" >

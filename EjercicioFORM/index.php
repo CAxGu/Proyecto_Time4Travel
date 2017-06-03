@@ -1,6 +1,8 @@
 <?php
 	if ((isset($_GET['page'])) && ($_GET['page']==="controller_user") ){
 		include("view/inc/top_page_user.php");
+	}else if ((isset($_GET['page'])) && ($_GET['page']==="controller_viajes") ){
+		include("view/inc/top_page_viajes.php");
 	}else{
 		include("view/inc/top_page.php");
 	}

@@ -8,6 +8,9 @@
 				case "controller_user";
 					include("module/user/controller/".$_GET['page'].".php");
 					break;
+				case "controller_viajes";
+					include("module/viajes/controller/".$_GET['page'].".php");
+					break;
 				case "services";
 					include("module/services/".$_GET['page'].".php");
 					break;
