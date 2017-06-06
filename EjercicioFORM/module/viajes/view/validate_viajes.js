@@ -64,22 +64,6 @@ function valida_fechaLlegada(texto) {
 	}
 }
 
-//REVISARLO
-function dias_transcurridos($fecha_i, $fecha_f) {
-
-	var f1 = Date.parse(fecha_i);
-	var f2 = Date.parse(fecha_f);
-
-	var date1 = new SimpleDateFormat("yyyy/mm/dd").parse(f1);
-	var date2 = new SimpleDateFormat("yyyy/mm/dd").parse(f2);
-
-	var milliseconds = date1.getTime() - date2.getTime();
-	var a = parseInt(milliseconds);
-
-	var dias = a / (1000 * 60 * 60 * 24);
-
-	return dias;
-}
 
 
 //==================================
@@ -101,7 +85,7 @@ function validate_viaje() {
 
 	if (document.getElementById('destino').value.length == 0) {
 		document.getElementById('e_destino').innerHTML = "Debe seleccionar un destino";
-		document.alta_viaje.destino.focus();
+		document.getElementById('destino').focus();
 		return false;
 	}
 	document.getElementById('e_destino').innerHTML = "";
@@ -138,10 +122,6 @@ function validate_viaje() {
 
 	if (document.getElementById('f_lleg').value.length == 0) {
 		document.getElementById('e_f_lleg').innerHTML = "Debe seleccionar una fecha de vuelta";
-		document.getElementById('f_lleg').focus();
-		return false;
-	} else if ((dias_transcurridos((document.getElementById('f_sal').value), (document.getElementById('f_lleg').value))) < 0) {
-		document.getElementById('e_f_lleg').innerHTML = "Debes escoger una fecha de vuelta posterior a la de salida";
 		document.getElementById('f_lleg').focus();
 		return false;
 	}

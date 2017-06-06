@@ -26,7 +26,7 @@
                 <option value="Bélgica" <?php if($_POST['destino']==="Bélgica") echo 'selected'?>>Bélgica</option>
                 <option value="China" <?php if($_POST['destino']==="China") echo 'selected'?>>China</option>
 			</select>
-			<span id="e_destino" class="styerror"></span>
+			<span id="e_destino" class="styerror">
 				<?php
 				echo($e_destino);
 				?>

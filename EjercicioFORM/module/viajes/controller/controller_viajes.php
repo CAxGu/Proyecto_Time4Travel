@@ -33,11 +33,9 @@
             $check = true;
             
             if (isset($_POST['create'])){
-
                 $check=validate_viaje();
 
                 if ($check['resultado']){
-
                     $_SESSION['idviaje']=$_POST;
 
                     try{

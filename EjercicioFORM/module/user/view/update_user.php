@@ -7,26 +7,47 @@
 		<div>
             <label>Usuario:</label>
            	<input size="30" name="usrnom" id="usrnom" type="text" placeholder="Introduzca su nombre de usuario" value="<?php echo $user['usuario'];?>" readonly>
-        </div>
+			<span  id="e_usrnom" class="styerror">
+				<?php
+				echo($e_usrnom);
+				?>
+			</span>
+		</div>
 		<div class="boxes">
 			<label>Contraseña:</label>
 			<input maxlength="12" size="30" type='password' name="psswd" id="psswd" placeholder="Introduzca su contraseña" value="<?php echo $user['password'];?>">
-			<span id="e_psswd" class="styerror"></span>
+			<span id="e_psswd" class="styerror">
+				<?php
+				echo($e_psswd);
+				?>
+			</span>
 		</div>
         <div class="boxes">
 			<label>Email:</label>
 			<input size="30" type='text' name="email" id="email" placeholder="Introduzca su email" value="<?php echo $user['email'];?>">
-			<span id="e_email" class="styerror"></span>
+			<span id="e_email" class="styerror">
+				<?php
+				echo($e_email);
+				?>
+			</span>
 		</div>
 		<div class="boxes">
 			<label>Nombre:</label>
 			<input size="30" type='text' name="nom" id="nom" placeholder="Introduzca su nombre" value="<?php echo $user['nombre'];?>">
-			<span id="e_nom" class="styerror"></span>	
+			<span id="e_nom" class="styerror">
+				<?php
+				echo($e_nom);
+				?>
+			</span>	
 		</div>
 		<div class="boxes">
 			<label>Apellidos:</label>
 			<input size="30" type='text' name="ape" id="ape" placeholder="Introduzca sus apellidos"  value="<?php echo $user['apellidos'];?>">
-			<span id="e_ape" class="styerror"></span>		
+			<span id="e_ape" class="styerror">
+				<?php
+				echo($e_ape);
+				?>
+			</span>		
 		</div>
 		<div class="boxes">
 			<label>Sexo:</label>
@@ -55,12 +76,20 @@
 		<div class="boxes">
 			<label>Fecha de Nacimiento:</label>
 			<input size="30" type="text" name= "f_nac" id="f_nac" placeholder="Ingrese su fecha de nacimiento" value="<?php echo $user['f_nac'];?>"/>
-			<span id="e_f_nac" class="styerror"></span>
+			<span id="e_f_nac" class="styerror">
+				<?php
+				echo($e_f_nac);
+				?>
+			</span>
 		</div>
 		<div class="boxes">
 			<label>Dirección:</label>
 			<input size="30" type='text' name="direc" id="direc" placeholder="Introduzca su dirección" value="<?php echo $user['direccion'];?>">
-			<span id="e_direc" class="styerror"></span>
+			<span id="e_direc" class="styerror">
+				<?php
+				echo($e_direc);
+				?>
+			</span>
 		</div>
 		<div class="boxes">
 			<label>País:</label>
@@ -70,7 +99,11 @@
 					<option value="Portugal"<?php if($user['pais']==="Portugal") echo 'selected'?>>Portugal</option>
 					<option value="Andorra"<?php if($user['pais']==="Andorra") echo 'selected'?>>Andorra</option>-->
 			</select>
-			<span id="e_pais" class="styerror"></span>
+			<span id="e_pais" class="styerror">
+				<?php
+				echo($e_pais);
+				?>
+			</span>
 		</div>
 			<!--<select name="pais" id="pais" >
 													<option value="" selected>-- Seleccione su País --</option>

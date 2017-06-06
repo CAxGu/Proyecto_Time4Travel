@@ -8,6 +8,9 @@
             <label>ID VIAJE:</label>
            	<input size="30" name="idviaje" id="idviaje" type="text" placeholder="Introduce el ID del viaje" value="<?php echo $user['codviaje'];?>" readonly >	
 			<span  id="e_idviaje" class="styerror">
+				<?php
+				echo($e_idviaje);
+				?>
 			</span>
         </div>
 		<div class="boxes">
@@ -21,12 +24,20 @@
                 <option value="Bélgica" <?php if($user['destino']==="Bélgica") echo 'selected'?>>Bélgica</option>
                 <option value="China" <?php if($user['destino']==="China") echo 'selected'?>>China</option>
 			</select>
-			<span id="e_destino" class="styerror"></span>
+			<span id="e_destino" class="styerror">
+				<?php
+				echo($e_destino);
+				?>
+			</span>
 		</div>
 		<div class="boxes">
 			<label>Precio:</label>
 			<input size="30" type='number' min="70" max="4000" name="precio" id="precio" placeholder="€" value="<?php echo $user['precio'];?>" >
-			<span id="e_precio" class="styerror"></span>
+			<span id="e_precio" class="styerror">
+				<?php
+					echo($e_precio);
+				?>
+			</span>
 		</div>
         <div class="boxes">
 			<label>Oferta:</label>
@@ -47,20 +58,32 @@
 		</div>
 		 <div class="boxes">
 			<label>Tipo:</label>
-			<input name="tipo[]" id="tipo[]" type="checkbox" value="Crucero">Crucero
-			<input name="tipo[]" id="tipo[]" type="checkbox" value="Tour">Tour
-            <input name="tipo[]" id="tipo[]" type="checkbox" value="Visita Guiada">Visita Guiada
-            <span id="e_tipo" class="styerror"></span>
+			<input name="tipo[]" id="tipo[]" type="checkbox" value="Crucero" <?php if(in_array("Crucero", explode(":", $user['tipo']))) echo 'checked'?>>Crucero
+			<input name="tipo[]" id="tipo[]" type="checkbox" value="Tour" <?php if(in_array("Tour", explode(":", $user['tipo']))) echo 'checked'?>>Tour
+            <input name="tipo[]" id="tipo[]" type="checkbox" value="Visita Guiada" <?php if(in_array("Visita Guiada", explode(":", $user['tipo']))) echo 'checked'?>>Visita Guiada
+            <span id="e_tipo" class="styerror">
+				<?php
+					echo($tipo);
+				?>
+			</span>
 		</div>
 		<div class="boxes">
 			<label>Fecha de Salida:</label>
-			<input size="30" type="text" name= "f_sal" id="f_sal" placeholder="Ingrese la fecha de salida" readonly value="<?php echo $_POST?$_POST['f_salida']:""; ?>" >
-			<span id="e_f_nac" class="styerror"></span>
+			<input size="30" type="text" name= "f_sal" id="f_sal" placeholder="Ingrese la fecha de salida" readonly value="<?php echo $user['f_salida'];?>" >
+			<span id="e_f_nac" class="styerror">
+				<?php
+					echo($e_f_sal);
+				?>
+			</span>
 		</div>
 		<div class="boxes">
 			<label>Fecha de Vuelta:</label>
-			<input size="30" type="text" name= "f_lleg" id="f_lleg" placeholder="Ingrese la fecha de vuelta" readonly value="<?php echo $_POST?$_POST['f_vuelta']:""; ?>" >
-			<span id="e_f_nac" class="styerror"></span>
+			<input size="30" type="text" name= "f_lleg" id="f_lleg" placeholder="Ingrese la fecha de vuelta" readonly value="<?php echo $user['f_vuelta'];?>" >
+			<span id="e_f_nac" class="styerror">
+				<?php
+					echo($e_f_lleg);
+				?>
+			</span>
 		</div>
 
 	    <br><br><div><input type="submit" name="update" id="update" value="Registro"/></div></br></br>
