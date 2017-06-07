@@ -142,3 +142,26 @@ border: 1px solid #e1e1e1;
     background-color:rgba(0, 0, 0, 0.50);
     padding:10px;
 }
+
+table.tablaServicios{
+	width: 10%;
+	margin-left: 80px;
+	padding:30px;
+}
+
+
+.tablaI1{
+	padding-left: 80px;
+	padding:30px;
+}
+
+.tablaC1{
+	padding-left: 80px;
+	padding-right: 80px;
+	padding:30px;
+}
+
+.tablaD1{
+	padding-right: 80px;
+	padding:30px;
+}

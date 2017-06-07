@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Alta de Usuario</title>
+	<title>Time4Travel - Alta de Usuario</title>
 	<link href="view/css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>

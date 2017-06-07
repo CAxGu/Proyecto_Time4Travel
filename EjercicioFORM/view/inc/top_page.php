@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>VIAJES</title>
+	<title>Time4Travel</title>
 	<link href="view/css/style.css" rel="stylesheet" type="text/css" />
 	<link href="view/css/js-image-slider.css" rel="stylesheet" type="text/css" />
     <script src="view/img/js/js-image-slider.js" type="text/javascript"></script>
