@@ -339,6 +339,7 @@
 		</div>-->
 											 
 		<br><br><div><input type="submit" name="create" id="create"/></div></br></br>
-        <br><br><div align="left"><a href="index.php?page=controller_user&op=list">Volver</a></div></br></br>
+        <br><br><div><a href="index.php?page=controller_user&op=list" align="left"><img src="view/img/back.png" height=20px weight=20px></a></div></br></br>
+		
 	</form>
     </div>

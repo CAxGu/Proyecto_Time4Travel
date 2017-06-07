@@ -67,5 +67,5 @@
         
     </table>
     </p>
-    <p><a href="index.php?page=controller_viajes&op=list">Volver</a></p>
+    <p><a href="index.php?page=controller_viajes&op=list" align="left"><img src="view/img/back.png" height=20px weight=20px></a></p>
 </div>

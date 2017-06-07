@@ -4,7 +4,19 @@
     			<h3>LISTA DE USUARIOS</h3>
     	</div>
     	<div class="row">
-    		<p><a href="index.php?page=controller_user&op=create"><img src="view/img/add.png" height=45px weight=45px></a></p>
+            <table>
+                <tr>
+                    <td align="left">
+                        <a href="index.php?page=controller_user&op=create"><img src="view/img/add.png" height=45px weight=45px></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="index.php?page=controller_user&op=deleteAll"><img src="view/img/deleteall.png" height=45px weight=45px></a>
+                    </td>
+                    <td align="right">
+                        <a href="index.php?page=controller_user&op=list" align="right"><img src="view/img/up.png" height=15px weight=15px></a>
+                        <a href="index.php?page=controller_user&op=listDesc" align="right"><img src="view/img/down.png" height=15px weight=15px></a>
+                    </td>
+                </tr>
+            </table>
     		
     		<table>
                 <tr>

@@ -87,5 +87,5 @@
 		</div>
 
 	    <br><br><div><input type="submit" name="update" id="update" value="Registro"/></div></br></br>
-        <br><br><div><a href="index.php?page=controller_viajes&op=list">Volver</a></div></br></br>		
+        <br><br><div><a href="index.php?page=controller_viajes&op=list" align="left"><img src="view/img/back.png" height=20px weight=20px></a></div></br></br>		
 	</form>

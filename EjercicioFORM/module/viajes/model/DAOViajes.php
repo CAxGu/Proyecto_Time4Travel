@@ -33,6 +33,16 @@
 			
             return $res;
 		}
+
+        	function select_all_viajesDesc(){
+
+			$sql = "SELECT * FROM viajes ORDER BY codviaje DESC";
+			$conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+			
+            return $res;
+		}
 		
 		function select_viajes($idviajes){
 			$sql = "SELECT * FROM viajes WHERE codviaje like '$idviajes'";
@@ -65,6 +75,15 @@
 		
 		function delete_viajes($idviajes){
 			$sql = "DELETE FROM viajes WHERE codviaje like '$idviajes'";
+			
+			$conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+		}
+
+        function delete_all_viajes(){
+			$sql = "DELETE FROM viajes";
 			
 			$conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

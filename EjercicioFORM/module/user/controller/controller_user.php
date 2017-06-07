@@ -24,6 +24,27 @@
                 include("module/user/view/list_user.php");
     		}
             break;
+
+
+        case 'listDesc';
+
+            try{
+
+                $daouser = new DAOUser();              
+            	$rdo = $daouser->select_all_userDesc();
+
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+			    die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+    			$callback = 'index.php?page=503';
+			    die('<script>window.location.href="'.$callback .'";</script>');
+    		}else{
+                include("module/user/view/list_user.php");
+    		}
+            break;
             
         case 'create';
             
@@ -146,6 +167,29 @@
             }
             
             include("module/user/view/delete_user.php");
+            break;
+
+         case 'deleteAll';
+            if (isset($_POST['delete'])){
+                try{
+                    $daouser = new DAOUser();
+                	$rdo = $daouser->delete_all_user();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+    			    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+            	
+            	if($rdo){
+        			echo '<script language="javascript">alert("Borrado en la base de datos correctamente")</script>';
+        			$callback = 'index.php?page=controller_user&op=list';
+    			    die('<script>window.location.href="'.$callback .'";</script>');
+        		}else{
+        			$callback = 'index.php?page=503';
+			        die('<script>window.location.href="'.$callback .'";</script>');
+        		}
+            }
+            
+            include("module/user/view/delete_all_user.php");
             break;
         default;
             include("view/inc/error404.php");

@@ -31,6 +31,18 @@
 			
             return $res;
 		}
+
+
+        function select_all_userDesc(){
+
+			$sql = "SELECT * FROM usuarios ORDER BY usuario DESC";
+			$conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+			
+            return $res;
+		}
+
 		
 		function select_user($usrnom){
 			$sql = "SELECT * FROM usuarios WHERE usuario like '$usrnom'";
@@ -69,5 +81,15 @@
             connect::close($conexion);
             return $res;
 		}
+
+        function delete_all_user(){
+			$sql = "DELETE FROM usuarios";
+			
+			$conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+		}
+
 
     }
