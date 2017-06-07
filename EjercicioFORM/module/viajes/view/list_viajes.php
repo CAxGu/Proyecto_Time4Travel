@@ -21,7 +21,7 @@
                     }else{
                         foreach ($rdo as $row) {
                        		echo '<tr>';
-                    	   	echo '<td>'. $row['codviaje'] . '</td>';
+                           	echo '<td>'. $row['codviaje'] . '</td>';
                     	   	echo '<td>'. $row['destino'] . '</td>';
                     	   	echo '<td>'. $row['tipo'] . '</td>';
                     	   	echo '<td align="center">';
