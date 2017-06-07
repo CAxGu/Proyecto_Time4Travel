@@ -1,11 +1,14 @@
 <h1>Contact Us</h1>
-<table border=1 align="center">
+<table align="center">
 <tr>
 <td>
-    <table border=1 align="center" paddin=25px>
+    <table align="center" paddin=25px/> 
+    <tr>
+        <img src="view/img/logo.png" height=100px weight=100px/>
+    </tr>
     <tr>
         <td>Direccion: </td>
-        <td>aaaaaaaaaaaaaaaaaaa</td>
+        <td>Calle Falsa 123</td>
     </tr>
     <tr>
         <td>Teléfono: </td>
@@ -13,23 +16,22 @@
     </tr>
     <tr>
         <td>E-mail</td>
-        <td>viajespepito@gmail.es</td>
+        <td><a href="mailto:viajesTime4Travel@gmail.es">viajesTime4Travel@gmail.es</a></td>
     </tr>
     </table>
 </td>
-<td><div id="map"></div>
+<td>
+<iframe
+  width="500"
+  height="450"
+  frameborder="0" style="border:0"
+  
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAc_qiFJi4JiWSq1XZfWw9FdQ2YIYPI09A
+    &q=Ontinyent
+    &zoom=13"
+    allowfullscreen>
+</iframe>
 
-    <!-- Google Maps JS API -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <!-- GMaps Library -->
-    <script src="gmaps.js"></script>
-    <script>
-      /* Map Object */
-      var mapObj = new GMaps({
-        el: '#map',
-        lat: 48.857,
-        lng: 2.295
-      });
-    </script></td>
+</td>
 </tr>
 </table>
